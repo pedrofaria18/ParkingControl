@@ -30,7 +30,7 @@ public class ParkingSpotModel implements Serializable {
     private String responsibleName;
     @Column(nullable = false, length = 30)
     private String apartment;
-    @Column(nullable = false, length = 3)
+    @Column(nullable = false, length = 30)
     private String block;
 
     public UUID getId() {
@@ -49,12 +49,12 @@ public class ParkingSpotModel implements Serializable {
         this.parkingSpotNumber = parkingSpotNumber;
     }
 
-    public String getLicencePlateCar() {
+    public String getLicensePlateCar() {
         return licensePlateCar;
     }
 
-    public void setLicencePlateCar(String licencePlateCar) {
-        this.licensePlateCar = licencePlateCar;
+    public void setLicensePlateCar(String licensePlateCar) {
+        this.licensePlateCar = licensePlateCar;
     }
 
     public String getBrandCar() {
