@@ -23,8 +23,7 @@ public class ParkingSpotController {
     }
 
     @PostMapping
-    public ResponseEntity<Object> createParkingSpot(@RequestBody ParkingSpotDto parkingSpotDto) {
-        System.out.println(parkingSpotDto.toString());
+    public ResponseEntity<Object> createParkingSpot(@RequestBody @Valid ParkingSpotDto parkingSpotDto) {
         var parkingSpotModel = new ParkingSpotModel();
         BeanUtils.copyProperties(parkingSpotDto, parkingSpotModel);
         parkingSpotModel.setRegistrationDate(LocalDateTime.now(ZoneId.of("UTC")));
